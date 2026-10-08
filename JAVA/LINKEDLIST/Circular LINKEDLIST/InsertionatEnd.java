@@ -27,10 +27,17 @@ public class InsertionatEnd{
             tail.next=head;
         }
     }
-Node newnode=new Node(5);
-tail.next=newnode;
-tail=newnode;
-tail.next=head;
+Node newnode = new Node(5);
+
+if (head == null) {
+    head = newnode;
+    tail = newnode;
+    tail.next = head;
+} else {
+    tail.next = newnode;
+    tail = newnode;
+    tail.next = head;
+}
     if(head!=null){
         Node curr=head;
         do{
